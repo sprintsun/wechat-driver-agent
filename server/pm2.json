@@ -1,0 +1,32 @@
+{
+  /**
+   * This is a sample configuration file for PM2
+   */
+
+  /**
+   * Here we declare the apps that must be managed by PM2
+   * All options are listed here:
+   * https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md#json-app-declaration
+   *
+   */
+  "apps": [
+    {
+      "name": "wechat-driver-agent",
+      "script": "./server/index.js",
+      "env": {
+        "BABEL_DISABLE_CACHE": 1,
+        "IS_ONLINE": 1
+      },
+      "exec_interpreter": "node",
+      "exec_mode": "cluster_mode",
+      "instances": 4,
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "max_memory_restart": "700M",
+      "merge_logs": true,
+      "error_file": "./logs/error.log",
+      "out_file": "./logs/out.log",
+      "pid_file": "./logs/pm2.pid",
+      "watch": false
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "wechat-driver-agent",
+  "description": "wechat driver agent",
+  "version": "0.1.0",
+  "author": "jiuhu.zh@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=dev ts-node-dev --respawn ./server/index.ts",
+    "dev": "NODE_ENV=dev ts-node-dev --respawn ./server/index.ts",
+    "prod": "NODE_ENV=production ts-node ./server/index.ts",
+    "ticket": "NODE_ENV=production AUTO_REGISTER=0 ts-node ./server/index.ts",
+    "test": "ts-node ./test/index.ts",
+    "launch": "ts-node ./test/node-test.ts",
+    "connect": "ts-node ./test/node-test.ts --launched=1"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "@types/koa-router": "^7.4.4",
+    "@types/lodash": "^4.14.175",
+    "@types/node": "^16.11.1",
+    "@types/winston": "^2.4.4",
+    "eslint": "^8.47.0",
+    "eslint-config-alloy": "^5.1.2",
+    "minimist": "^1.2.5",
+    "ts-node": "^10.3.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4",
+    "webdriverio": "^7.10.1"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "chalk": "^4.1.2",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.1.1",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.21",
+    "miniprogram-automator": "0.12.0-beta.1",
+    "shelljs": "^0.8.4",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5"
+  }
+}
